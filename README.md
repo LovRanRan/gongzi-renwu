@@ -15,7 +15,7 @@
 
 ## 部署
 
-线上地址：https://gongzi-renwu-production.up.railway.app
+线上地址：https://gongzi-renwu-production-0433.up.railway.app
 
 本项目可以直接部署到支持 Node 的平台。
 
