@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>工资任务</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-label="工资任务收入计时器">
+      <section class="quest-panel">
+        <header class="hero">
+          <p class="hero-kicker">记录你的真实工资</p>
+          <h1>工资任务</h1>
+        </header>
+
+        <section class="input-grid" aria-label="工资设置">
+          <label class="field">
+            <span>年薪</span>
+            <input
+              id="salaryInput"
+              inputmode="decimal"
+              autocomplete="off"
+              type="text"
+              pattern="[0-9,.]*"
+              value="500000"
+            />
+          </label>
+
+          <label class="field">
+            <span>每周工时</span>
+            <input
+              id="hoursInput"
+              inputmode="decimal"
+              autocomplete="off"
+              type="text"
+              pattern="[0-9,.]*"
+              value="40"
+            />
+          </label>
+        </section>
+
+        <section class="control-grid" aria-label="工作控制">
+          <button id="pauseButton" class="quest-button quest-button-dark" type="button">
+            <span id="pauseLabel">暂停</span>
+            <span id="pauseIcon" aria-hidden="true">II</span>
+          </button>
+
+          <button id="endButton" class="quest-button quest-button-danger" type="button">
+            <span>结束</span>
+            <span>工作</span>
+            <span class="stop-mark" aria-hidden="true"></span>
+          </button>
+        </section>
+
+        <section class="work-section" aria-label="当前工作进度">
+          <div class="work-label-row">
+            <span>工作进度</span>
+            <span id="progressLabel">0%</span>
+          </div>
+          <div class="progress-shell" aria-hidden="true">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <div class="session-meta">
+            <span id="statusText">正在工作</span>
+            <span id="timeText">00:00:00</span>
+          </div>
+        </section>
+
+        <section class="earnings-section" aria-label="累计收入">
+          <h2>累计收入</h2>
+          <output id="earningsOutput" class="earnings">¥0.00</output>
+          <p class="estimate-note">*根据年薪实时估算</p>
+        </section>
+
+        <section class="stats-grid" aria-label="收入明细">
+          <div>
+            <span>时薪</span>
+            <strong id="hourlyOutput">¥0.00</strong>
+          </div>
+          <div>
+            <span>本次收入</span>
+            <strong id="sessionOutput">¥0.00</strong>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
